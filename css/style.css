@@ -235,3 +235,6 @@ footer a:hover {
     color: var(--orange-vif);
     transform: translateY(-3px);
 }
+. com img{
+    height: 200px;
+}
