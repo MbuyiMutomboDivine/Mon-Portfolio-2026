@@ -1,21 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <title>Contact - Mon Portfolio</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
-
-
 </head>
 <body>
    <header>
     <div>
-        <a href="">Mon Portfolio</a>
+        <a href="index.html">Mon Portfolio</a>
     </div>
     <nav>
         <ul>
@@ -23,15 +21,62 @@
             <li><a href="projets.html">Projets</a></li>
             <li><a href="passions.html">Passions</a></li>
             <li><a href="divertissement.html">Divertissement</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
     </nav>
    </header>
+
+   <main>
+    <section>
+        <div>
+            <h2>Contactez-moi</h2>
+        </div>
+    </section>
+    <section class="contact-container">
+        <div class="contact-info">
+            <h2>Mes Cordonnées</h2>
+            <p>Je suis actuellement basée à <strong>Lubumbashi</strong>.</p>
+            
+            <div class="info-item">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Lubumbashi, RDC</span>
+            </div>
+
+            <div class="info-item">
+                <i class="fa-solid fa-phone"></i>
+                <span>+243 996835461</span>
+            </div>
+
+            <div class="social-direct">
+                <a href="https://wa.me/243996835461" target="_blank" class="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                </a>
+                <a href="https://t.me/+243996835461" target="_blank" class="telegram">
+                    <i class="fa-brands fa-telegram"></i> Telegram
+                </a>
+            </div>
+        </div>
+
+        <div class="contact-form">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="nom">Nom complet</label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="telephone">Téléphone</label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="+243..." required>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer</button>
+            </form>
+        </div>
+    </section>
+   </main>
    
    <footer>
     <div>
-        <p>Contactez-nous!</p>
-        <p>&copy; 2026 Divine Mbuyi. Tous droits reservés.</p>
+        <p>Contactez-nous !</p>
+        <p>&copy; 2026 Divine Mbuyi. Tous droits réservés.</p>
     </div>
     <div>
         <a href=""><i class="fa-brands fa-github"></i></a>
@@ -41,4 +86,3 @@
    </footer>
 </body>
 </html>
-
