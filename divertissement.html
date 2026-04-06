@@ -3,30 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Portfolio</title>
+    <title>Divertissement - Divine Mbuyi</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
-
-
 </head>
 <body>
    <header>
     <div>
-        <a href="">Mon Portfolio</a>
+        <a href="index.html">Mon Portfolio</a>
     </div>
     <nav>
         <ul>
             <li><a href="index.html">Accueil</a></li>
             <li><a href="projets.html">Projets</a></li>
             <li><a href="passions.html">Passions</a></li>
-            <li><a href="divertissement.html">Divertissement</a></li>
+            <li><a href="divertissement.html" class="active">Divertissement</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
    </header>
+
+   <main>
+    <section class="titre">
+        <div>
+            <h2>Mes Divertissements</h2>
+        </div>
+    </section>
+
+    <section class="grille-divertissement">
+        <article class="card-diverto">
+            <div>
+                <img src="images/cuisine.jpg" alt="La Cuisine" width="300">
+            </div>
+            <div>
+                <h3>L'Art Culinaire</h3>
+                <p>
+                    Pour moi, cuisiner c'est une passion et un amour, 
+                     assembler les bons ingrédients pour créer un résultat parfait. qui est une création  à sa juste valeur, 
+                     car cette création est une histoire et un plaisir dans la bouche miam...  
+                </p>
+            </div>
+        </article>
+
+        <article class="card-diverto">
+            <div>
+                <img src="images/lecture.jpg" alt="La Lecture" width="300">
+            </div>
+            <div>
+                <h3>Évasion Littéraire</h3>
+                <p>Lire me permet d'explorer des mondes infinis et de nourrir ma curiosité intellectuelle au-delà du code.</p>
+            </div>
+            <div class="icones-passions">
+                <a href=""><i class="fas fa-heart"></i></a>
+                <a href=""><i class="fa-fire"></i></a>
+
+            </div>
+        </article>
+
+        <article class="card-diverto">
+            <div>
+                <img src="images/musique.jpg" alt="La Musique" width="300">
+            </div>
+            <div >
+                <h3>Vibration Musicale</h3>
+                <p>La musique est le moteur de ma concentration. Un bon rythme transforme une longue session de débogage en un plaisir.</p>
+            </div>
+        </article>
+    </section>
+   </main>
    
    <footer>
     <div>
@@ -40,4 +85,3 @@
    </footer>
 </body>
 </html>
-

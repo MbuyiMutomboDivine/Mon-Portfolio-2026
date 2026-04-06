@@ -176,7 +176,7 @@ section h2::after {
     margin: 0 auto;
     border-collapse: collapse;
     background-color: #FFF;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 5px 15px rgba(151, 21, 21, 0.08);
     border-radius: 10px ;
     overflow: hidden;
 
@@ -680,109 +680,430 @@ footer a:hover {
     display: flex;
     gap: 8px;
 }
-/* Styles pour la page Contact */
-.contact-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    max-width: 1000px;
-    margin: 6rem auto;
-    padding: 2rem;
-    gap: 3rem;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+
+/* =========================================
+   Nouveaux Styles Magnifiques - Page Contact
+   ========================================= */
+
+/* Appliquer le fond vert clair UNIQUEMENT sur la page contact */
+/* Pour que cela fonctionne, ajoutez class="contact-page" au <body> de contact.html */
+body.contact-page {
+    background-color: var(--vert-fond);
 }
 
-.contact-info {
-    flex: 1;
+/* Ajuster le Header pour la page Contact */
+body.contact-page header {
+    background-color: white;
+    box-shadow: white;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+body.contact-page header div a {
+    color: var(--vert-fonce);
+}
+
+body.contact-page ul li a:hover,
+body.contact-page a.active {
+    color: var(--vert-fonce);
+}
+
+body.contact-page ul li a::after {
+    background-color: var(--vert-fonce);
+}
+
+
+/* Section Hero Contact */
+.contact-hero {
+    text-align: center;
+    margin: 8rem 2rem 4rem;
+}
+
+.contact-hero h1 {
+    color: var(--vert-fonce);
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.contact-hero p {
+    color: var(--gris-fonce);
+    font-size: 1.4rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+/* Conteneur principal - Grille */
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    max-width: 1100px;
+    margin: 0 auto 8rem;
+    padding: 0 2rem;
+    align-items: start;
+}
+
+/* Style commun des cartes */
+.contact-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.contact-card h2 {
+    color: var(--vert-fonce);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
     text-align: left;
+}
+
+.contact-card h2::after {
+    margin: 1rem 0; /* Aligner la barre à gauche */
+    background-color: var(--vert-doux);
+}
+
+/* Carte Info */
+.location-text {
+    font-size: 1.1rem;
+    color: var(--gris-fonce);
+    margin-bottom: 2rem;
 }
 
 .info-item {
     margin: 1.5rem 0;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
     gap: 15px;
-    color: var(--gris-fonce);
+    color: var(--gris-tres-fonce);
+    font-weight: 500;
 }
 
 .info-item i {
-    color: var(--violet-doux);
-    font-size: 1.4rem;
+    color: var(--vert-doux);
+    font-size: 1.5rem;
 }
 
 .social-direct {
     display: flex;
+    flex-wrap: wrap;
     gap: 15px;
-    margin-top: 2rem;
+    margin-top: 3rem;
 }
 
 .social-direct a {
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 8px;
+    padding: 12px 24px;
+    border-radius: 12px;
     color: white;
     font-weight: 600;
     display: flex;
     align-items: center;
-    gap: 8px;
-    transition: opacity 0.3s;
+    gap: 10px;
+    font-size: 1.1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.whatsapp { background-color: #25D366; }
-.telegram { background-color: #0088cc; }
+.whatsapp {
+    background-color: #25D366;
+    box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+}
 
-.social-direct a:hover { opacity: 0.8; }
+.telegram {
+    background-color: #0088cc;
+    box-shadow: 0 4px 14px rgba(0, 136, 204, 0.3);
+}
 
-.contact-form {
-    flex: 1;
-    width: 100%;
+.social-direct a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+
+/* Carte Formulaire */
+.contact-form-card form {
+    margin-top: 2rem;
 }
 
 .form-group {
     margin-bottom: 1.5rem;
-    text-align: left;
 }
 
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: var(--gris-tres-fonce);
-    font-weight: 600;
-}
-
+/* Formulaire épuré : pas de labels, juste des inputs avec placeholders */
 .form-group input {
     width: 100%;
-    padding: 12px;
+    padding: 15px;
     border: 1px solid var(--gris-clair);
-    border-radius: 8px;
+    border-radius: 12px;
     font-size: 1rem;
-    outline-color: var(--violet-doux);
+    background-color: var(--gris-tres-clair);
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--vert-doux);
+    background-color: white;
 }
 
 .btn-submit {
     width: 100%;
-    background-color: var(--violet-fonce);
+    background-color: var(--vert-fonce);
     color: white;
-    padding: 12px;
+    padding: 15px;
     border: none;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: 600;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 1rem;
 }
 
 .btn-submit:hover {
-    background-color: var(--violet-doux);
+    background-color: var(--vert-hover);
+    transform: translateY(-2px);
 }
 
-/* Responsive pour mobiles */
+
+/* Ajuster le Footer pour la page Contact */
+body.contact-page footer {
+    background-color: var(--vert-fonce);
+}
+
+body.contact-page footer a:hover {
+    color: var(--vert-doux);
+}
+
+
+/* Responsive */
 @media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
-        margin: 2rem;
+    .contact-hero h1 {
+        font-size: 2.8rem;
+
+
     }
+    /* =========================================
+   STYLE POUR LA PAGE PASSIONS 
+   (S'adapte aux classes : ecommerce, gestionnaire, etc.)
+   ========================================= */
+
+/* 1. Le conteneur principal qui aligne les cartes */
+.mes_realisations {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+    background-color: #f4f7f6; /* Fond très léger pour le contraste */
+}
+
+/* 2. Style commun à toutes tes classes d'articles */
+.ecommerce, 
+.gestionnaire, 
+.personnel, 
+.dashboard, 
+.application, 
+.maquette {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    width: 320px; /* Largeur fixe pour l'alignement */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet au survol */
+.ecommerce:hover, 
+.gestionnaire:hover, 
+.personnel:hover, 
+.dashboard:hover, 
+.application:hover, 
+.maquette:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(83, 78, 221, 0.2);
+}
+
+/* 3. Style des images dans les articles */
+.ecommerce img, 
+.gestionnaire img, 
+.personnel img, 
+.dashboard img, 
+.application img, 
+.maquette img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 4px solid #534EDD; /* Ta couleur violette */
+}
+
+/* 4. Titres et Textes */
+.ecommerce h3, 
+.gestionnaire h3, 
+.personnel h3, 
+.dashboard h3, 
+.application h3, 
+.maquette h3 {
+    padding: 20px 20px 5px 20px;
+    margin: 0;
+    color: #534EDD;
+    font-size: 1.4rem;
+    font-family: 'Google Sans Flex', sans-serif;
+}
+
+.ecommerce p, 
+.gestionnaire p, 
+.personnel p, 
+.dashboard p, 
+.application p, 
+.maquette p {
+    padding: 0 20px 15px 20px;
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1; /* Permet d'aligner les boutons en bas même si le texte est court */
+}
+
+/* 5. Les Tags (langages/outils) */
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 0 20px 15px 20px;
+}
+
+.tags span {
+    background-color: #f0f0ff;
+    color: #534EDD;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 1px solid #e0e0ff;
+}
+
+/* 6. Le bas de la carte (Boutons) */
+.card-footer {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+}
+
+.card-footer a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.2s;
+}
+
+.card-footer a i {
+    color: #534EDD;
+}
+
+.card-footer a:hover {
+    color: #534EDD;
+}
+
+/* 7. Style du titre de la section */
+.titre {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.titre h2 {
+    font-size: 2.2rem;
+    color: #333;
+    display: inline-block;
+    border-bottom: 3px solid #534EDD;
+    padding-bottom: 10px;
+}
+/* Conteneur principal pour aligner les 3 articles côte à côte */
+.grille-divertissement {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Pour que ça reste joli sur mobile */
+    gap: 30px;
+    padding: 40px 20px;
+    background-color: #f9f9f9; /* Optionnel : un fond léger pour faire ressortir les cartes */
+}
+
+/* Style de chaque bloc (Art Culinaire, Lecture, Musique) */
+.card-diverto {
+    display: flex;
+    flex-direction: column; /* Empile les éléments verticalement */
+    width: 320px;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-diverto:hover {
+    transform: translateY(-5px); /* Petit effet au survol */
+}
+
+/* On force l'ordre visuel : Texte en haut, Image au milieu, Icônes en bas */
+
+/* Le div qui contient le h3 et le p */
+.card-diverto div:nth-child(2) {
+    order: 1; /* Passe en premier (en haut) */
+    margin-bottom: 15px;
+}
+
+/* Le div qui contient l'image */
+.card-diverto div:nth-child(1) {
+    order: 2; /* Passe en deuxième (au milieu) */
+}
+
+.card-diverto img {
+    width: 100%; /* Prend toute la largeur du bloc */
+    height: 200px;
+    object-fit: cover; /* Évite de déformer l'image */
+    border-radius: 8px;
+}
+
+/* Style pour les titres et paragraphes */
+.card-diverto h3 {
+    color: #0056b3;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.card-diverto p {
+    color: #555;
+    line-height: 1.5;
+    font-size: 0.95rem;
+    text-align: justify;
+}
+
+/* Bloc pour les icônes (à ajouter dans ton HTML à la fin de chaque article) */
+.icones-passions {
+    order: 3; /* Toujours en bas */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 1.2rem;
+    color: #0056b3;
 }
